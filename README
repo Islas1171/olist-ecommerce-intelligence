@@ -1,0 +1,33 @@
+# Olist E-Commerce Intelligence Pipeline
+
+## Project Overview
+An end-to-end Data Engineering and Analytics pipeline built to transform raw Brazilian e-commerce data (9 CSV datasets) into a high-performance MySQL relational database. This project focuses on **Schema Enforcement**, **Data Integrity**, and **Advanced Business Auditing**.
+
+## Tech Stack
+* **Language:** Python 3.x
+* **Libraries:** Pandas, SQLAlchemy, Matplotlib
+* **Database:** MySQL
+* **Tools:** MySQL Workbench, Git
+
+## Key Features
+
+### 1. Automated ETL & Schema Enforcement
+* Engineered a Python-based ETL engine to migrate ~100k records from CSV to MySQL.
+* Implemented strict **Schema Enforcement** using SQLAlchemy `types`, ensuring financial data utilized `DECIMAL(10,2)` for precision and relational keys utilized indexed `VARCHAR(50)`.
+* Built an integrity verification loop that cross-references Python row counts and unique `customer_id` counts (99,441) against the SQL production environment.
+
+### 2. Advanced SQL Business Audit
+Performed a high-level relational audit to solve core business challenges:
+* **Logistics Analysis:** Identified average shipping delays by state (AL, MA, SE) using `DATEDIFF` logic.
+* **Customer Lifetime Value (CLV):** Isolated "Power Users" (3+ orders with above-average spend) using complex subqueries and `HAVING` clauses.
+* **Payment Optimization:** Categorized raw payment types into clean groups to analyze Average Order Value (AOV).
+
+### 3. Data Visualization
+* Generated time-series analysis for monthly order volume.
+* Developed delivery performance box plots to compare actual vs. estimated arrival times.
+
+## How to Run
+1. Configure your MySQL credentials in `olist.py`.
+2. Ensure all 9 Olist CSV files are in the root directory.
+3. Execute `python olist.py` to trigger the ETL pipeline and visualizations.
+4. Run `olist_intelligence.sql` in MySQL Workbench for the business audit results.
