@@ -1,16 +1,13 @@
-# Olist E-Commerce Intelligence Pipeline
-
-## Project Overview
+# Olist E-Commerce Intelligence Pipeline## Project Overview
 An end-to-end Data Engineering and Analytics pipeline built to transform raw Brazilian e-commerce data (9 CSV datasets) into a high-performance MySQL relational database. This project focuses on **Schema Enforcement**, **Data Integrity**, and **Advanced Business Auditing**.
 
 ## Tech Stack
-* **Language:** Python 3.x
-* **Libraries:** Pandas, SQLAlchemy, Matplotlib
-* **Database:** MySQL
-* **Tools:** MySQL Workbench, Git
+* ** Language:** Python 3.x
+* ** Libraries:** Pandas, SQLAlchemy, Matplotlib
+* ** Database:** MySQL
+* ** Tools:** MySQL Workbench, Git
 
 ## Key Features
-
 ### 1. Automated ETL & Schema Enforcement
 * Engineered a Python-based ETL engine to migrate ~100k records from CSV to MySQL.
 * Implemented strict **Schema Enforcement** using SQLAlchemy `types`, ensuring financial data utilized `DECIMAL(10,2)` for precision and relational keys utilized indexed `VARCHAR(50)`.
@@ -18,9 +15,9 @@ An end-to-end Data Engineering and Analytics pipeline built to transform raw Bra
 
 ### 2. Advanced SQL Business Audit
 Performed a high-level relational audit to solve core business challenges:
-* **Logistics Analysis:** Identified average shipping delays by state (AL, MA, SE) using `DATEDIFF` logic.
-* **Customer Lifetime Value (CLV):** Isolated "Power Users" (3+ orders with above-average spend) using complex subqueries and `HAVING` clauses.
-* **Payment Optimization:** Categorized raw payment types into clean groups to analyze Average Order Value (AOV).
+* ** Logistics Analysis:** Identified average shipping delays by state (AL, MA, SE) using `DATEDIFF` logic.
+* ** Customer Lifetime Value (CLV):** Isolated "Power Users" (3+ orders with above-average spend) using complex subqueries and `HAVING` clauses.
+* ** Payment Optimization:** Categorized raw payment types into clean groups to analyze Average Order Value (AOV).
 
 ### 3. Data Visualization
 * Generated time-series analysis for monthly order volume.
